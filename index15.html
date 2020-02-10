@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var user_name = prompt('Введите сюда свое имя:', "Введите имя");
+if (user_name == "Введите имя")
+{
+    alert("Ошибка ввода!!!");
+    exit;
+}
+alert('Ваше имя ' + user_name + '. Очень рад знакомству с вами!!!');
+var age = prompt('Сколько вам лет, если не секрет?', "35 лет");
+if (isNaN(age))
+{
+    alert("Ошибка ввода!!!");
+    exit;
+}
+age = Number(age) +10;
+alert('Через 10 лет вам исполнится ' + age + ' лет.');
+var begin = confirm("Начать заново?");
+//alert(begin);
+if (begin){
+location.reload();
+}
+if (!begin){
+exit;
+}
+</script>
+</body>
+</html>

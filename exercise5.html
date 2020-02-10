@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function exercise5() {
+                var input = prompt('Введите трехзначное число: '); 
+                var number = parseInt(input, 10); // вычитываем из строки число (с основанием 10)
+                if (isNaN(number)) { // ввели не число
+                    alert('Введенная строка не является числом');
+                    return; 
+                }
+
+                number = Math.abs(number).toString(10); // берем по модулю и переводим обратно в строку (с основанием 10)
+                var countOfDigits = number.length; // считаем количество символов
+
+                if (countOfDigits !== 3) { // ввели не трехзначное число
+                    alert('Введенная строка не является трехзначным числом');
+                    return; 
+                }
+
+                // берем символы с позиций 0,1,2
+                var digit1 = number.charAt(0),
+                    digit2 = number.charAt(1),
+                    digit3 = number.charAt(2);
+
+                // сравниваем
+                if (digit1 === digit2 || digit2 === digit3 || digit1 === digit3) {
+                    alert('Найдено совпадение цифр');
+                } else {
+                    alert('Совпадений не найдено');
+                }
+            }
+
+            exercise5();
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
